@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "32cd884e-6681-40c7-8bf6-ffe3b81be62b",
+		"name": "Transcript Tagging System",
+		"description": "Collection of API calls for the Transcript Tagging System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7681856"
+	},
+	"item": [
+		{
+			"name": "Upload Transcript",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Pritam/Downloads/interviews_uk/watchMeThink/transcript.srt"
+						}
+					]
+				},
+				"url": "http://localhost:8080/transcripts/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Transcript",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": "http://localhost:8080/transcripts/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tag",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tagName\":\"new\",\"startIndex\":10,\"endIndex\":21,\"segment\":{\"id\":1}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/tags"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Tag",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": "http://localhost:8080/tags/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Segment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/tags/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Alltags",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/tags"
+			},
+			"response": []
+		},
+		{
+			"name": "All transcripts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/transcripts"
+			},
+			"response": []
+		}
+	]
+}
