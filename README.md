@@ -17,3 +17,7 @@ This is the backend component of the Transcript Tagging System, built using Spri
 
 ## Check POSTMAN collection
 - File name : Transcript Tagging System.postman_collection
+
+## License
+
+[MIT](LICENSE)
